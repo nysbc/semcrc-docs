@@ -14,14 +14,13 @@ copyright: >-
   Copyright &copy; 2026 &mdash;
   SEMC  Research Computing
 
-# Configuration
-#docs_dir: src
-#site_dir: site
-#
-
 # Theme options
 theme:
   name: material
   palette:
     primary: deep orange
     scheme: slate
+
+nav:
+  - Home: index.md
+  - Globus: globus.md

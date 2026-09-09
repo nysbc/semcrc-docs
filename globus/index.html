@@ -1,0 +1,1002 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for SEMC resources for member institution and NCCAT users.">
+      
+      
+        <meta name="author" content="John Pellman">
+      
+      
+        <link rel="canonical" href="https://semc.nysbc.org/globus/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Globus - SEMC Research Computing Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#globus-data-transfer-from-semc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SEMC Research Computing Documentation" class="md-header__button md-logo" aria-label="SEMC Research Computing Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SEMC Research Computing Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Globus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nysbc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SEMC RC Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SEMC Research Computing Documentation" class="md-nav__button md-logo" aria-label="SEMC Research Computing Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    SEMC Research Computing Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nysbc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SEMC RC Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globus
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-to-globus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging in to Globus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging in to Globus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-orcid-account-and-linking-it-with-globus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an ORCID Account and Linking it with Globus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-in-with-institutional-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging in with Institutional Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#globus-file-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globus File Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferring-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferring Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transferring Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transferring-files-from-nysbc-to-your-personal-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferring files from NYSBC to your personal endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferring-files-from-nysbc-to-your-home-institution-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferring files from NYSBC to your home institution endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#im-unable-to-link-my-globus-account-to-my-nccatmemc-account-from-the-cuimc-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm unable to link my Globus account to my NCCAT/MEMC account from the CUIMC Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-unlink-my-memc-account-and-link-my-nccat-account-and-vice-versa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I unlink my MEMC account and link my NCCAT account (and vice versa)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-globus-transfer-times-out-every-5-10-minutes-and-is-proceeding-very-slowly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Globus transfer times out every 5-10 minutes and is proceeding very slowly
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Globus transfer times out every 5-10 minutes and is proceeding very slowly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-issue-occurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this issue occurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-to-globus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging in to Globus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging in to Globus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-orcid-account-and-linking-it-with-globus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating an ORCID Account and Linking it with Globus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-in-with-institutional-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging in with Institutional Credentials
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#globus-file-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globus File Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferring-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferring Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transferring Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transferring-files-from-nysbc-to-your-personal-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferring files from NYSBC to your personal endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transferring-files-from-nysbc-to-your-home-institution-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferring files from NYSBC to your home institution endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#im-unable-to-link-my-globus-account-to-my-nccatmemc-account-from-the-cuimc-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm unable to link my Globus account to my NCCAT/MEMC account from the CUIMC Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-unlink-my-memc-account-and-link-my-nccat-account-and-vice-versa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I unlink my MEMC account and link my NCCAT account (and vice versa)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-globus-transfer-times-out-every-5-10-minutes-and-is-proceeding-very-slowly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Globus transfer times out every 5-10 minutes and is proceeding very slowly
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Globus transfer times out every 5-10 minutes and is proceeding very slowly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-issue-occurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this issue occurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="globus-data-transfer-from-semc">Globus Data Transfer from SEMC</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Globus is an application that lets you transfer large amounts of
+research data efficiently and securely to your personal computer,
+institution's storage systems or a cloud provider. It eliminates the use
+of big portable external hard drives that need to be mounted to a local
+storage to transfer data. The New York Structural Biology Center
+primarily uses Globus to transfer data that is collected on-site from
+electron microscopes. To get started with, follow the instructions
+below.</p>
+<h2 id="logging-in-to-globus">Logging in to Globus</h2>
+<p>Typically, you can log into Globus with your institutional credentials.
+To determine if this is possible, check if your institution is listed
+under the dropdown menu located on the <a href="https://app.globus.org">Globus login
+page</a>. If it is, you
+can skip to the next section (<em>Logging in with Institutional
+Credentials</em>).</p>
+<p><img alt="Globus Logon via CILogin" src="../assets/images/globus_cilogon_1.png" /></p>
+<h3 id="creating-an-orcid-account-and-linking-it-with-globus">Creating an ORCID Account and Linking it with Globus</h3>
+<p>If you do not have access to Globus via your institution, you can use
+your ORCID to sign in to Globus. If you do not already have an ORCID,
+you can sign up for one <a href="https://orcid.org/register">here</a>. To sign in
+with your ORCID, you will need to click the green ORCID button on the
+login page:</p>
+<p><img alt="" src="../assets/images/globus_orcid_1.png" /></p>
+<p>You will then be prompted to connect your ORCID to Globus. Click the
+<em>Authorize access</em> button when prompted.</p>
+<p><img alt="" src="../assets/images/globus_orcid_2.png" /></p>
+<p>If your ORCID account is successfully linked with Globus, you will be
+presented with the following screen. Click <em>Continue</em>.</p>
+<p><img alt="" src="../assets/images/globus_orcid_3.png" /></p>
+<p>Fill out the subsequent form. Enter in your email address and
+organizational affiliation when prompted.</p>
+<p>Finally, grant Globus the permissions it needs from your ORCID account
+by clicking on <em>Allow</em> on the last screen:</p>
+<p><img alt="" src="../assets/images/globus_orcid_5.png" /></p>
+<p>You should now be logged into Globus. For future sessions, you can click
+the green ORCID button on the main page to log in again.</p>
+<h3 id="logging-in-with-institutional-credentials">Logging in with Institutional Credentials</h3>
+<p>Select your institution from the dropdown on the Globus login page and
+click <em>Continue</em>.</p>
+<p><img alt="" src="assets/images/globus_cilogon_.png" /></p>
+<p>You will now be prompted with the dialogue you typically use to log in
+to your institution's services (email, etc). Enter your institutional
+credentials (e.g., NetID, UNI) and sign in as normal.</p>
+<p><img alt="" src="../assets/images/globus_cilogon_2.png" /></p>
+<h3 id="globus-file-manager">Globus File Manager</h3>
+<p>Once you have successfully signed in (via ORCID or institutional
+credentials) you will be presented with the Globus file manager. In the
+next section, we will describe how you can use this web interface to
+initiate data transfers to your home institution.</p>
+<p><img alt="" src="../assets/images/globus_filemanager.png" /></p>
+<h2 id="transferring-data">Transferring Data</h2>
+<h3 id="transferring-files-from-nysbc-to-your-personal-endpoint">Transferring files from NYSBC to your personal endpoint</h3>
+<ol>
+<li>
+<p>Click on the Collections tab and type 'NYSBC#SEMC' This will act as
+your source endpoint, where you will be transferring files from</p>
+<p><img alt="" src="../assets/images/image6.png" /></p>
+</li>
+<li>
+<p>You will see a login widget below which will ask for your username
+and password to authenticate. Please take note that you need to enter
+the username which was provided by SEMC when you first registered for
+your project. Also, note that this username is all lowercase</p>
+<p>If you are already logged into another NYSBC account. Please go to
+<em>Settings</em> -&gt; <em>Manage Identities</em> -&gt; <em>NYSBC OIDC Server</em></p>
+<p><img alt="" src="../assets/images/image7.png" /></p>
+</li>
+<li>
+<p>After you authenticate, you will see your default path which is
+currently set at <code>/h1/&lt;username&gt;</code>.</p>
+<p><img alt="" src="../assets/images/image8.png" /></p>
+</li>
+<li>
+<p>You can transfer raw frames and references by selecting the 'frames'
+folder</p>
+<ul>
+<li>Select your username.</li>
+<li>Then, select the session you want to transfer frames from eg:
+22mar18g).</li>
+<li>Under the <code>rawdata</code> folder, you will see all your raw frames</li>
+</ul>
+</li>
+<li>
+<p>You can also transfer aligned images by selecting the 'leginon'
+folder</p>
+<ul>
+<li>Select your username</li>
+<li>Then select the session you want to transfer frames from eg:
+22mar18g)</li>
+<li>Under the rawdata folder you will see all your aligned images</li>
+</ul>
+<p><img alt="" src="../assets/images/image9.png" /></p>
+</li>
+<li>
+<p>Now, you need to select the destination endpoint. For transferring
+files to your personal computer, you need to install Globus Connect
+Personal. Click on <em>Endpoints</em> on the left navigation bar and select '⊕
+Create a personal endpoint' on the top right of the screen</p>
+<p><img alt="" src="../assets/images/image10.png" /></p>
+<p>You will see the following screen</p>
+<p><img alt="" src="../assets/images/image11.png" /></p>
+</li>
+<li>
+<p>Download and install the Globus Connect Personal as per your OS
+distribution.  For specific installation instructions:</p>
+<ul>
+<li><a href="https://docs.globus.org/how-to/globus-connect-personal-mac/">Mac</a></li>
+<li><a href="https://docs.globus.org/how-to/globus-connect-personal-windows">Windows</a> </li>
+<li>
+<p><a href="https://docs.globus.org/how-to/globus-connect-personal-linux/">Linux</a></p>
+</li>
+<li>
+<p>Log In, then press allow, this will take you to the Globus Connect
+ Personal Setup</p>
+<ul>
+<li>For Owner Identity, select your Globus ID</li>
+<li>Enter your endpoint collection name. eg: Personal Computer</li>
+<li>Press 'Save'</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../assets/images/image12.png" /></p>
+</li>
+<li>
+<p>Next, select your personal endpoint as your destination endpoint. Go
+back to the file manager and select <strong>NYSBC#SEMC</strong> in the Collection tab.</p>
+</li>
+<li>Then select, transfer and sync to option.</li>
+<li>
+<p>On the right side, select your personal endpoint as the destination
+endpoint. Please see the screenshot.</p>
+<p><img alt="" src="../assets/images/image13.png" /></p>
+<p>You will now see the folders on your laptop.</p>
+</li>
+<li>
+<p>Once you select the appropriate source and destination folder, then
+click on Start to initiate the transfer process</p>
+<p><img alt="" src="../assets/images/image13.png" /></p>
+</li>
+<li>
+<p>To monitor the transfer process, click on the Activity tab on the
+left sidebar</p>
+</li>
+</ol>
+<p>You will see the transfer logs and the message when the transfer is
+completed.</p>
+<p>Note: Sometimes, your personal computer will be under a firewall which
+will not allow transferring files. To configure your firewall settings,
+please see the Globus documentation <a href="https://docs.globus.org/how-to/configure-firewall-gcp/">here</a>.</p>
+<p>For any issues related to Globus please check the following guides:</p>
+<ul>
+<li><a href="https://docs.globus.org/how-to/">https://docs.globus.org/how-to/</a></li>
+<li><a href="https://docs.globus.org/faq/">https://docs.globus.org/faq/</a></li>
+</ul>
+<h3 id="transferring-files-from-nysbc-to-your-home-institution-endpoint">Transferring files from NYSBC to your home institution endpoint</h3>
+<ul>
+<li>Follow steps 1 - 5 as described above.</li>
+<li>Then select your home institution endpoint as the destination
+ ndpoint. Please contact your organization's IT team to acquire the name
+ f the endpoint authorized by your institution and for the login
+ redentials and queries related to your directory permissions.</li>
+<li>Follow step 11 as described above.</li>
+<li>You can keep track of data transfer status by clicking on the
+Activity tab. When the transfer is completed, you will see a green check
+mark and "Condition" will say SUCCEEDED.</li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<h3 id="im-unable-to-link-my-globus-account-to-my-nccatmemc-account-from-the-cuimc-campus">I'm unable to link my Globus account to my NCCAT/MEMC account from the CUIMC Campus</h3>
+<p>The typical advice we give to Columbia affiliates if they encounter an
+error with Globus account linking is to first switch to a different
+network (e.g., a WiFi hotspot). This is because our Globus endpoint
+domain (<em>globus3.5540bd.75bc.data.globus.org</em>) apparently cannot be
+used on certain CUIMC networks. Specifically, our Globus domain cannot
+be resolved (i.e., its domain name cannot be mapped to an IP address).
+The <em>domain globus3.5540bd.75bc.data.globus.org</em> is managed by Globus
+(not us) and in turn, uses Amazon as a domain name provider. Ultimately
+this means that there is a problem with CUIMC IT's domain name
+infrastructure where Amazon domains cannot be reached; from the outside
+it's unclear if this an actual issue or just a matter of policy related
+to the protection of patient data / PHI.</p>
+<p>If you keep encountering this issue, our advice would be to contact
+CUIMC IT and/or Globus support.</p>
+<h3 id="how-do-i-unlink-my-memc-account-and-link-my-nccat-account-and-vice-versa">How do I unlink my MEMC account and link my NCCAT account (and vice versa)?</h3>
+<p>If you currently have a MEMC account linked to your Globus account, you
+may not be able to access your NCCAT directory (or vice versa). If this
+is the case, you should use the following instructions to unlink your
+MEMC account and link to your NCCAT account:</p>
+<ol>
+<li>Click on <em>Manage Identities</em> on the <em>Settings</em> page in the Globus
+web UI.</li>
+<li>Then on the next page click on the trash can icon in the same row as
+<em><username>@globus3.5540bd.75bc.data.globus.org</em>.
+and then click on <em>Unlink Identity</em>. </li>
+<li>Next time you are prompted to log in with your credentials, use your
+NCCAT account and its associated password.</li>
+</ol>
+<h3 id="my-globus-transfer-times-out-every-5-10-minutes-and-is-proceeding-very-slowly">My Globus transfer times out every 5-10 minutes and is proceeding very slowly</h3>
+<p>On rare occasions, your transfer may proceed slowly and then time out at
+regular intervals. The time-out errors will look something like the
+following:</p>
+<pre><code>Error (transfer)
+Endpoint: myuniversity#endpoint(586f0817-9bd9-4eb5-bbdd-017afd630986)
+Server: m-98f9a0.99817a.0ec8.data.globus.org:443
+Command: STOR
+/path/to/myfile.mrc
+Message: The operation timed out
+---
+Details: Timeout waiting for response
+</code></pre>
+<p>As an initial troubleshooting step, we suggest that you run your
+transfer over a VPN (such as <a href="https://protonvpn.com/">ProtonVPN</a> or
+<a href="https://mullvad.net">Mullvad</a>). If this does not resolve the issue,
+please contact the MEMC or NCCAT office and we can assist. A longer
+explanation of the most common cause for this issue can be found below.</p>
+<h4 id="why-this-issue-occurs">Why this issue occurs</h4>
+<p>If your Globus endpoint is on a university/research institute campus,
+the particular issue that you are encountering is most likely caused by
+a quirk of how internet routing works. Our network engineer has
+configured our gateway router so that outgoing traffic is sent over
+<a href="https://nysernet.org/home">NYSERNet</a> (our regional research and
+education network). Our network also sends a message to other networks
+(such as your institution's network) telling them to send incoming
+traffic over NYSERNet as well. However, sometimes this message (a route
+advertisement) does not reach a network, and incoming traffic is routed
+differently.</p>
+<p>This asymmetry in routing (outbound traffic over NYSERNet, inbound
+traffic from another network) causes the connection to become
+periodically interrupted, and every time this happens your Globus client
+needs to create an entirely new connection, which slows the transfer
+down considerably.</p>
+<p>Our network engineer's workaround for this is to manually implement an
+exception to our normal routing logic. For this to work, we require a
+fixed IP address or range for the destination that traffic should go to.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 &mdash; SEMC  Research Computing
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

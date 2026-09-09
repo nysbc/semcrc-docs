@@ -18,8 +18,10 @@ copyright: >-
 theme:
   name: material
   palette:
-    primary: deep orange
+    primary: black
     scheme: slate
+  logo: assets/images/logo.png
+  favicon: assets/images/fav.png
 
 nav:
   - Home: index.md

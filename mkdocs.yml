@@ -1,0 +1,27 @@
+# Site information
+site_name:        SEMC Research Computing Documentation
+site_description: Documentation for SEMC resources for member institution and NCCAT users.
+site_author:      John Pellman
+site_url:         https://semc.nysbc.org
+
+# Repository
+repo_name: SEMC RC Documentation
+repo_url:  https://github.com/nysbc
+edit_uri:  https://github.com/nysbc/semcrc-docs
+
+# Copyright
+copyright: >-
+  Copyright &copy; 2026 &mdash;
+  SEMC  Research Computing
+
+# Configuration
+#docs_dir: src
+#site_dir: site
+#
+
+# Theme options
+theme:
+  name: material
+  palette:
+    primary: deep orange
+    scheme: slate
